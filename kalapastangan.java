@@ -1,18 +1,22 @@
 public class kalapastangan {
-
+    //text color. can be changed or removed
     static final String CYAN = "\u001B[36m";
     
+    //text style
     static final String BOLD = "\u001B[1m";
     static final String ITALIC = "\u001B[3m";
 
+    //converts pause second to millisecond for thread.sleep()
     static final int SECOND_TO_MILLISECOND = 1000;
 
+    //pauses the lyrics
     static void pause(double stopTime)
             throws InterruptedException {
 
         Thread.sleep((int) (stopTime * SECOND_TO_MILLISECOND));
     }
 
+    //prints out each character of the line and controls the speed
     static void print(String text, int speed)
             throws InterruptedException {
 
@@ -24,6 +28,7 @@ public class kalapastangan {
         }
     }
 
+    //combines the pause and print method, this is what you'll use to run the lyrics
     static void lyrics(String text, int speed, double pause, String style)
             throws InterruptedException {
 
@@ -35,7 +40,8 @@ public class kalapastangan {
 
         pause(pause);
     }
-    
+
+    //just an intro. it can be changed or removed if you want
     static void intro() throws InterruptedException {
     	lyrics("Playing Kalapstangan by fitterkarma".toUpperCase(), 60, 4, CYAN);
     	System.out.println();
@@ -44,12 +50,12 @@ public class kalapastangan {
     public static void main(String[] args) throws InterruptedException {
     	
     	intro();
-
+        
         lyrics(
-            "OOh, ang langit ay nandito lamang pala sa lupa",
-            110,
-            3.5,
-            CYAN
+            "OOh, ang langit ay nandito lamang pala sa lupa", //song lyrics/line
+            110, //speed of print of each character in the lyric line
+            3.5, // how long the pause should be after the program finish printing the line
+            CYAN //color of text
         );
 
         lyrics(
