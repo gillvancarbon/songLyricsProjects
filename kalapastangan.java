@@ -9,7 +9,7 @@ public class kalapastangan {
     //converts pause second to millisecond for thread.sleep()
     static final int SECOND_TO_MILLISECOND = 1000;
 
-    //pauses the lyrics
+    //pauses the lyrics by miliseconds
     static void pause(double stopTime)
             throws InterruptedException {
 
