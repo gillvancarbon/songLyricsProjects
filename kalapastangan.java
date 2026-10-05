@@ -28,7 +28,7 @@ public class kalapastangan {
         }
     }
 
-    //combines the pause and print method, this is what you'll use to run the lyrics
+    //combines the print and pause function to make it easier to call
     static void lyrics(String text, int speed, double pause, String style)
             throws InterruptedException {
 
@@ -43,7 +43,10 @@ public class kalapastangan {
 
     //just an intro. it can be changed or removed if you want
     static void intro() throws InterruptedException {
-    	lyrics("Playing Kalapstangan by fitterkarma".toUpperCase(), 60, 4, CYAN);
+    	lyrics("Playing Kalapstangan by fitterkarma".toUpperCase(),
+        60, 
+        4, 
+        CYAN);
     	System.out.println();
     }
 
